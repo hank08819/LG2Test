@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lgfid"
+version = "0.1.0"
+description = "Local and global fidelity (L, G) of low-dimensional maps, and the LG reversal test"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = ["numpy", "scipy", "scikit-learn"]
+
+[project.optional-dependencies]
+plot = ["matplotlib"]
+
+[project.scripts]
+lgfid = "lgfid.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
